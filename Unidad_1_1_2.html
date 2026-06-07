@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ciber-Media — 1.1.2 Evolución de la computación gráfica</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/nav-subtemas.css">
+</head>
+<body>
+
+<input type="checkbox" id="menu-toggle">
+<input type="checkbox" id="unidad-toggle" class="submenu-toggle">
+
+<div class="header">
+    <div class="left-group">
+        <label for="menu-toggle" class="menu-btn">☰</label>
+        <img src="images/logonombresinfondoinverido.png" class="logo">
+    </div>
+    <img src="images/logoupiicsassinfondo.png" class="logo">
+</div>
+
+<div class="sidebar">
+    <a href="menu-principal.html">
+        <span class="icon"><img src="images/hogarinvertido.png" width="20"></span>
+        <span class="text">Inicio</span>
+    </a>
+    <label for="unidad-toggle" class="menu-item">
+        <span class="icon"><img src="images/librosinvertido.png" width="20"></span>
+        <span class="text">Unidades</span>
+    </label>
+    <div class="submenu">
+        <a href="Unidad_I.html" class="unidad">Unidad 1<span class="titulo-unidad">Contexto de la Multimedia</span></a>
+        <a href="Unidad_II.html" class="unidad">Unidad 2<span class="titulo-unidad">Tecnologías emergentes</span></a>
+        <a href="Unidad_III.html" class="unidad">Unidad 3<span class="titulo-unidad">Desarrollo e integración</span></a>
+    </div>
+    <a href="HERRAMIENTAS MULTIMEDIA.pdf" target="_blank">
+        <span class="icon"><img src="images/editarinvertido.png" width="20"></span>
+        <span class="text">Temario</span>
+    </a>
+    <a href="menu-principal-contactos.html">
+        <span class="icon"><img src="images/usuariosinvertido.png" width="20"></span>
+        <span class="text">Contacto</span>
+    </a>
+</div>
+
+<div class="main">
+
+    <nav class="subtema-nav">
+        <a href="Unidad_1_1_1.html" class="nav-btn" title="Anterior: Elementos de la multimedia">
+            ◀ Anterior
+        </a>
+
+        <div class="nav-menu-wrapper" id="navMenuWrapper">
+            <button class="nav-menu-btn" onclick="toggleMenu()">
+                <span>☰ Subtemas</span>
+                <span id="menuArrow">▾</span>
+            </button>
+            <div class="nav-dropdown" id="navDropdown">
+                <div class="grupo-label">Unidad 1 — Antecedentes y fundamentos</div>
+                <a href="Unidad_1_1_1.html"><span class="num">1.1.1</span>Elementos de la multimedia</a>
+                <a href="Unidad_1_1_2.html" class="activo"><span class="num">1.1.2</span>Evolución de la computación gráfica</a>
+                <a href="Unidad_1_1_3.html"><span class="num">1.1.3</span>La Web en la multimedia</a>
+                <a href="Unidad_1_1_4.html"><span class="num">1.1.4</span>Formatos de imagen, audio, video y texto</a>
+                <div class="grupo-label">Unidad 2</div>
+                <a href="Unidad_II.html"><span class="num">2</span>Tecnologías emergentes</a>
+                <div class="grupo-label">Unidad 3</div>
+                <a href="Unidad_III.html"><span class="num">3</span>Desarrollo e integración</a>
+            </div>
+        </div>
+
+        <div class="nav-titulo">
+            <span>1.1.2</span>Evolución de la computación gráfica
+        </div>
+
+        <a href="Unidad_1_1_3.html" class="nav-btn" title="Siguiente: La Web en la multimedia">
+            Siguiente ▶
+        </a>
+    </nav>
+
+    <div class="content-box">
+        <h1>1.1.2 La evolución de la computación gráfica en la multimedia</h1>
+        <h2>La historia en la evolución de la computación y su impacto en la multimedia.</h2>
+
+        <p>La evolución de la computación gráfica ha sido fundamental para el desarrollo de la multimedia, permitiendo la creación de contenido visual cada vez más sofisticado y realista.</p>
+        <p>Los avances en hardware, como las tarjetas gráficas dedicadas, han permitido a los desarrolladores crear experiencias multimedia más inmersivas, desde videojuegos hasta aplicaciones de realidad virtual.</p>
+
+        <p><strong>1981</strong> — IBM lanza sus primeros computadores personales, el primer vistazo a la multimedia.</p>
+        <p><strong>1982</strong> — Se empieza a emplear el "Morphing Digital". También aparece la primera versión de AutoCAD v1.0.</p>
+        <p><strong>1983</strong> — Se presenta el "DataGlove", un instrumento con sensores para generar realidad virtual. Silicon Graphics lanza el Iris 1000, el primer motor de renderizado 3D.</p>
+        <p><strong>1984</strong> — Bill Kovacs funda Wavefront, el primer laboratorio de realidad virtual.</p>
+        <p><strong>1985</strong> — Se presenta "Dream Flight", el primer cortometraje animado en contar una historia.</p>
+        <p><strong>1986</strong> — Se forma Pixar cuando Steve Jobs compra la división de computación gráfica de Lucasfilm.</p>
+        <p><strong>1989</strong> — Se crea el cortometraje "The Abyss", la primera creación realista modelada en 3D.</p>
+    </div>
+<div class="breadcrumb">
+    <a href="menu-principal.html">Inicio</a> <span class="bc-sep">›</span>
+    <a href="Unidad_I.html">Unidad I</a> <span class="bc-sep">›</span>
+    <span>1.1.2 Evolución de la computación gráfica</span>
+</div>
+</div>
+
+<footer class="footer">
+    <p>© 2026 Ciber Media. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+const menuToggle   = document.getElementById("menu-toggle");
+const unidadToggle = document.getElementById("unidad-toggle");
+
+menuToggle.addEventListener("change", () => {
+    if (menuToggle.checked) unidadToggle.checked = false;
+});
+
+function toggleGrupo(btn) {
+    const items = btn.nextElementSibling;
+    const isOpen = btn.classList.contains("open");
+    btn.classList.toggle("open", !isOpen);
+    items.classList.toggle("open", !isOpen);
+}
+
+function toggleMenu() {
+    const wrapper = document.getElementById("navMenuWrapper");
+    const arrow   = document.getElementById("menuArrow");
+    wrapper.classList.toggle("open");
+    arrow.textContent = wrapper.classList.contains("open") ? "▴" : "▾";
+}
+
+document.addEventListener("click", (e) => {
+    const wrapper = document.getElementById("navMenuWrapper");
+    if (!wrapper.contains(e.target)) {
+        wrapper.classList.remove("open");
+        document.getElementById("menuArrow").textContent = "▾";
+    }
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ciber-Media</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- CONTROLADORES -->
+<input type="checkbox" id="menu-toggle">
+<input type="checkbox" id="unidad-toggle" class="submenu-toggle">
+
+<!-- HEADER -->
+<div class="header">
+    <div class="left-group">
+        <label for="menu-toggle" class="menu-btn">☰</label>
+        <img src="images/logonombresinfondoinverido.png" class="logo">
+    </div>
+
+    <img src="images/logoupiicsassinfondo.png" class="logo">
+</div>
+
+<!-- MENÚ LATERAL -->
+<div class="sidebar">
+
+    <a href="menu-principal.html">
+        <span class="icon">
+            <img src="images/hogarinvertido.png" width="20">
+        </span>
+        <span class="text">Inicio</span>
+    </a>
+
+    <label for="unidad-toggle" class="menu-item">
+        <span class="icon">
+            <img src="images/librosinvertido.png" width="20">
+        </span>
+        <span class="text">Unidades</span>
+    </label>
+
+    <div class="submenu">
+
+        <a href="Unidad_I.html" class="unidad">
+            Unidad 1
+            <span class="titulo-unidad">Contexto de la Multimedia para aplicaciones informáticas</span>
+        </a>
+
+        <a href="Unidad_II.html" class="unidad">
+            Unidad 2
+            <span class="titulo-unidad">Tecnologias emergentesen las herramientas multimedia</span>
+        </a>
+
+        <a href="Unidad_III.html" class="unidad">
+            Unidad 3
+            <span class="titulo-unidad">Desarrollo e integración de herramientas multimedia a sistemas informaticos</span>
+        </a>
+
+    </div>
+
+    <a href="HERRAMIENTAS MULTIMEDIA.pdf" target="_blank">
+        <span class="icon">
+            <img src="images/editarinvertido.png" width="20">
+        </span>
+        <span class="text">Temario</span>
+    </a>
+
+    <a href="menu-principal-contactos.html">
+        <span class="icon">
+            <img src="images/usuariosinvertido.png" width="20">
+        </span>
+        <span class="text">Contacto</span>
+    </a>
+
+</div>
+
+<div class="main">
+    <div class="content-box">
+
+        <h1>Herramientas Multimedia</h1>
+
+        <p>
+            En la era digital, las herramientas multimedia se han convertido en piezas clave para la comunicación, el aprendizaje y la creatividad. Desde la edición de imágenes y video hasta la producción de audio y diseño interactivo, estas tecnologías permiten transformar ideas en contenidos dinámicos, atractivos y accesibles para todo tipo de público.
+        </p>
+
+
+
+        <p>
+            En el ámbito educativo, las herramientas multimedia han revolucionado la forma en que se imparte el conocimiento, permitiendo la creación de materiales interactivos, presentaciones dinámicas y recursos audiovisuales que enriquecen la experiencia de aprendizaje. En el mundo empresarial, estas herramientas son esenciales para la creación de contenido de marketing, presentaciones corporativas y comunicación interna.
+        </p>
+        <a href="https://www.youtube.com/embed/e-lQYKYbOtI" target="_blank">
+    <h2>Elementos de la multimedia</h2>
+</a>
+<div class="media-flex-container">
+    
+    <div class="media-flex-item">
+        <video controls>
+            <source src="images/¿Qué es la multimedia_.mp4" type="video/mp4">
+            Tu navegador no soporta video embebido.
+        </video>
+    </div>
+
+    <div class="media-flex-item">
+        <img src="images/elementos multimedia menu.png" alt="Descripción de la imagen">
+    </div>
+
+</div>
+    </div>
+</div>
+
+
+<!-- 🔥 SCRIPT QUE CIERRA UNIDADES CUANDO SE CIERRA EL MENÚ -->
+<script>
+const menuToggle = document.getElementById("menu-toggle");
+const unidadToggle = document.getElementById("unidad-toggle");
+
+menuToggle.addEventListener("change", function() {
+    if (menuToggle.checked) {
+        unidadToggle.checked = false;
+    }
+});
+</script>
+<footer class="footer">
+    <p>© 2026 Ciber Media. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>

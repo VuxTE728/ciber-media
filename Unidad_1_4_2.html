@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ciber-Media — 1.4.2 La animación la base de la realidad virtual</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/nav-subtemas.css">
+    <style>
+        /* ── breadcrumb ── */
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: #aaa;
+            padding: 10px 0 0 2px;
+            flex-wrap: wrap;
+        }
+        .breadcrumb a {
+            color: #e53935;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .bc-sep { color: #555; font-size: 15px; }
+    </style>
+</head>
+<body>
+
+<input type="checkbox" id="menu-toggle">
+<input type="checkbox" id="unidad-toggle" class="submenu-toggle">
+
+<div class="header">
+    <div class="left-group">
+        <label for="menu-toggle" class="menu-btn">☰</label>
+        <img src="images/logonombresinfondoinverido.png" class="logo">
+    </div>
+    <img src="images/logoupiicsassinfondo.png" class="logo">
+</div>
+
+<div class="sidebar">
+    <a href="menu-principal.html">
+        <span class="icon"><img src="images/hogarinvertido.png" width="20"></span>
+        <span class="text">Inicio</span>
+    </a>
+    <label for="unidad-toggle" class="menu-item">
+        <span class="icon"><img src="images/librosinvertido.png" width="20"></span>
+        <span class="text">Unidades</span>
+    </label>
+    <div class="submenu">
+        <a href="Unidad_I.html" class="unidad">Unidad 1<span class="titulo-unidad">Contexto de la Multimedia</span></a>
+        <a href="Unidad_II.html" class="unidad">Unidad 2<span class="titulo-unidad">Tecnologías emergentes</span></a>
+        <a href="Unidad_III.html" class="unidad">Unidad 3<span class="titulo-unidad">Desarrollo e integración</span></a>
+    </div>
+    <a href="HERRAMIENTAS MULTIMEDIA.pdf" target="_blank">
+        <span class="icon"><img src="images/editarinvertido.png" width="20"></span>
+        <span class="text">Temario</span>
+    </a>
+    <a href="menu-principal-contactos.html">
+        <span class="icon"><img src="images/usuariosinvertido.png" width="20"></span>
+        <span class="text">Contacto</span>
+    </a>
+</div>
+
+<div class="main">
+
+    <nav class="subtema-nav">
+        <a href="Unidad_1_4_1.html" class="nav-btn" title="Anterior: Tecnologías abiertas y cerradas en la animación">◀ Anterior</a>
+
+        <div class="nav-menu-wrapper" id="navMenuWrapper">
+            <button class="nav-menu-btn" onclick="toggleMenu()">
+                <span>☰ Subtemas</span>
+                <span id="menuArrow">▾</span>
+            </button>
+            <div class="nav-dropdown" id="navDropdown">
+                <div class="grupo-label">Unidad 1.1 — Antecedentes y fundamentos</div>
+                <a href="Unidad_1_1_1.html"><span class="num">1.1.1</span>Elementos de la multimedia</a>
+                <a href="Unidad_1_1_2.html"><span class="num">1.1.2</span>Evolución de la computación gráfica</a>
+                <a href="Unidad_1_1_3.html"><span class="num">1.1.3</span>La Web en la multimedia</a>
+                <a href="Unidad_1_1_4.html"><span class="num">1.1.4</span>Formatos de imagen, audio, video y texto</a>
+                <div class="grupo-label">Unidad 1.2 — Herramientas</div>
+                <a href="Unidad_1_2_1.html"><span class="num">1.2.1</span>Descripción de los elementos multimedia</a>
+                <a href="Unidad_1_2_2.html"><span class="num">1.2.2</span>Manejo de cámara: Tomas, movimientos y planos</a>
+                <a href="Unidad_1_2_3.html"><span class="num">1.2.3</span>Lenguaje visual y la semiótica</a>
+                <a href="Unidad_1_2_4.html"><span class="num">1.2.4</span>Procesamiento digital de audio</a>
+                <div class="grupo-label">Unidad 1.3 — Animación</div>
+                <a href="Unidad_1_3_1.html"><span class="num">1.3.1</span>La animación y su conceptualización</a>
+                <a href="Unidad_1_3_2.html"><span class="num">1.3.2</span>Tipos de animación y sus características</a>
+                <a href="Unidad_1_3_3.html"><span class="num">1.3.3</span>El proceso en los diferentes tipos de animación</a>
+                <div class="grupo-label">Unidad 1.4 — Aplicaciones</div>
+                <a href="Unidad_1_4_1.html"><span class="num">1.4.1</span>Tecnologías abiertas y cerradas en la animación</a>
+                <a href="Unidad_1_4_2.html" class="activo"><span class="num">1.4.2</span>La animación: base de la realidad virtual</a>
+            </div>
+        </div>
+
+        <div class="nav-titulo">
+            <span>1.4.2</span>La animación: base de la realidad virtual
+        </div>
+
+        <a href="Unidad_II.html" class="nav-btn" title="Siguiente unidad">Siguiente ▶</a>
+    </nav>
+
+    <div class="content-box">
+        <nav class="breadcrumb"><a href="Unidad_I.html">Unidad 1</a><span class="bc-sep">›</span><span>Unidad 1.4</span><span class="bc-sep">›</span><span>Unidad 1.4.2</span></nav>
+        <h1>1.4.2 La animación la base de la realidad virtual</h1>
+        <h2>Cómo la animación se integra en la realidad virtual y su función.</h2>
+        
+        <p>La animación es fundamental para la realidad virtual (VR) porque permite crear entornos y personajes que pueden interactuar con el usuario de manera inmersiva. La animación da vida a los objetos y personajes dentro del entorno virtual, haciendo que la experiencia sea más realista y atractiva.</p>
+        <table style="border:2px solid #ccc;width:100%;border-collapse:collapse;" cellpadding="10">
+            <tr style="background:#f0f0f0;"><th>Función de la Animación en VR</th><th>Descripción</th></tr>
+            <tr><td><strong>Creación de Entornos Inmersivos</strong></td><td>La animación permite diseñar mundos virtuales detallados que los usuarios pueden explorar, aumentando la sensación de presencia.</td></tr>
+            <tr style="background:#fafafa;"><td><strong>Interacción con Personajes y Objetos</strong></td><td>Los personajes animados pueden responder a las acciones del usuario, creando una experiencia interactiva y personalizada.</td></tr>
+            <tr><td><strong>Simulación de Movimientos Realistas</strong></td><td>La animación ayuda a simular movimientos naturales de personajes y objetos, mejorando la credibilidad del entorno virtual.</td></tr>
+            <tr style="background:#fafafa;"><td><strong>Narrativa Visual</strong></td><td>La animación puede usarse para contar historias dentro del entorno virtual, guiando al usuario a través de una experiencia narrativa.</td></tr>
+        </table>
+
+    </div>
+
+</div>
+
+<footer class="footer">
+    <p>© 2026 Ciber Media. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    const menuToggle   = document.getElementById("menu-toggle");
+    const unidadToggle = document.getElementById("unidad-toggle");
+    menuToggle.addEventListener("change", () => {
+        if (menuToggle.checked) unidadToggle.checked = false;
+    });
+    function toggleMenu() {
+        const wrapper = document.getElementById("navMenuWrapper");
+        const arrow   = document.getElementById("menuArrow");
+        wrapper.classList.toggle("open");
+        arrow.textContent = wrapper.classList.contains("open") ? "▴" : "▾";
+    }
+    document.addEventListener("click", (e) => {
+        const wrapper = document.getElementById("navMenuWrapper");
+        if (!wrapper.contains(e.target)) {
+            wrapper.classList.remove("open");
+            document.getElementById("menuArrow").textContent = "▾";
+        }
+    });
+</script>
+</body>
+</html>

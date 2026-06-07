@@ -1,0 +1,581 @@
+/* ============================================================
+   ESTILOS UNIFICADOS — Ciber-Media
+   Reemplaza: MENUPINCIPAL.css, MENUPINCIPAL_Contactos.css,
+              MENU_UNIDADES.css
+   ============================================================ */
+
+/* ===== RESET ===== */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #2c2f36;
+}
+
+/* ===== PÁGINA DE INICIO (index.html) ===== */
+body.pagina-inicio {
+    height: 100vh;
+    background-image: url("../images/jakub-zerdzicki-sEQd1efFFxM-unsplash.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #2f2f2f;
+    width: 350px;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.4);
+    opacity: 0;
+    transform: translateY(40px);
+    animation: aparecer 0.8s ease-out forwards;
+}
+
+.card .logo {
+    width: 100%;
+    margin-bottom: 20%;
+}
+
+@keyframes aparecer {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== HEADER ===== */
+.header {
+    height: 60px;
+    background: #1f1f1f;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    left: 0; right: 0; top: 0;
+    z-index: 1000;
+}
+
+.left-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.menu-btn {
+    font-size: 22px;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+
+.menu-btn:hover { color: #e53935; }
+
+.logo { height: 40px; }
+
+/* ===== CHECKBOXES OCULTOS ===== */
+#menu-toggle,
+.submenu-toggle {
+    display: none;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 240px;
+    height: 100%;
+    background: #1f1f1f;
+    padding-top: 20px;
+    transition: 0.4s;
+}
+
+.sidebar a,
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    justify-content: flex-start;
+    transition: 0.3s;
+}
+
+.sidebar a:hover,
+.menu-item:hover { background: #333; }
+
+.icon { width: 25px; text-align: center; }
+
+.text { transition: 0.3s; white-space: nowrap; }
+
+/* ===== SUBMENÚ ===== */
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+    background: #2a2a2a;
+}
+
+.submenu a {
+    display: block;
+    padding: 10px 20px 10px 60px;
+    color: white;
+}
+
+.submenu a:hover { background: #444; }
+
+/* Tooltip del nombre de unidad */
+.unidad { position: relative; flex-direction: column; align-items: flex-start; }
+
+.titulo-unidad {
+    display: block;
+    font-size: 12px;
+    color: #ccc;
+    margin-top: 5px;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.unidad:hover .titulo-unidad { opacity: 1; }
+
+/* ===== MENÚ CERRADO ===== */
+#menu-toggle:checked ~ .sidebar        { width: 70px; }
+#menu-toggle:checked ~ .main           { margin-left: 70px; }
+#menu-toggle:checked ~ .footer         { margin-left: 70px; }
+#menu-toggle:checked ~ .sidebar .text  { opacity: 0; width: 0; overflow: hidden; }
+#menu-toggle:checked ~ .sidebar .submenu { max-height: 0; }
+
+/* Mostrar submenú */
+#unidad-toggle:checked ~ .sidebar .submenu { max-height: 200px; }
+
+/* ===== CONTENIDO PRINCIPAL ===== */
+.main {
+    margin-top: 60px;
+    margin-left: 240px;
+    padding: 30px;
+    transition: 0.4s;
+    font-size: 20px;
+}
+
+.content-box {
+    background: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    font-size: 20px;
+}
+
+/* ===== VIDEO RESPONSIVO ===== */
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border-radius: 8px;
+}
+
+/* ===== IMÁGENES ===== */
+.image-container { text-align: center; margin-top: 20px; }
+
+.image-container img { max-width: 100%; height: auto; border-radius: 10px; }
+
+/* ===== FOOTER ===== */
+.footer {
+    background: #1f1f1f;
+    color: #ccc;
+    text-align: center;
+    padding: 15px;
+    margin-left: 240px;
+    font-size: 14px;
+}
+
+/* ===== TARJETAS DE UNIDADES (Unidad_I, II, III) ===== */
+.unidad-container { margin-top: 30px; }
+
+.btn-unidad {
+    background: #1f1f1f;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.btn-unidad:hover { background: #e53935; transform: translateY(-3px); }
+
+.grande { width: 100%; margin-bottom: 20px; }
+
+/* Details/summary como botón */
+summary { list-style: none; cursor: pointer; }
+summary::-webkit-details-marker { display: none; }
+
+details.btn-unidad { padding: 0; overflow: hidden; }
+details.btn-unidad summary { padding: 20px; }
+details[open] { background: #2a2a2a; }
+
+.subtemas {
+    padding: 15px 20px;
+    animation: fade 0.3s ease-in-out;
+}
+
+/* Tarjetas internas de subtemas */
+.btn-unidad.interna {
+    background: #333;
+    padding: 18px;
+    border-radius: 8px;
+    margin-top: 12px;
+    cursor: pointer;
+    transition: 0.25s;
+    border-left: 4px solid #e53935;
+    display: flex;
+    align-items: center;
+}
+
+.texto { flex: 1; }
+
+.icono-btn { width: 40px; height: 40px; }
+
+.btn-unidad.interna h4 { margin: 0; font-size: 16px; }
+
+.btn-unidad.interna p { margin-top: 5px; font-size: 13px; color: #cfcfcf; }
+
+.btn-unidad.interna:hover { background: #e53935; transform: translateX(5px); }
+
+.btn-unidad.interna:hover p { color: white; }
+
+@keyframes fade {
+    from { opacity: 0; transform: translateY(-5px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== CONTACTOS ===== */
+.contactos {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.contact-card {
+    background: white;
+    width: 220px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.35);
+}
+
+.contact-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
+}
+
+.contact-card:hover img { transform: scale(1.08); }
+
+.contact-card h3 { margin: 10px 0 5px; }
+
+.contact-card p { margin: 3px 0; font-size: 14px; }
+
+.email { color: #0077ff; cursor: pointer; font-weight: bold; }
+
+.email:hover { text-decoration: underline; }
+
+/* ===== GLOBAL ===== */
+a { text-decoration: none; }
+
+.btn {
+    background-color: #e53935;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover { background-color: #c62828; transform: scale(1.05); }
+/* ============================================================
+   BARRA DE NAVEGACIÓN STICKY DE SUBTEMAS
+   Agregar al final de estilos.css
+   ============================================================ */
+
+/* ===== BARRA STICKY ===== */
+.subtema-nav {
+    position: sticky;
+    top: 60px;              /* justo debajo del header fijo */
+    z-index: 900;
+    background: #181a1f;
+    border-bottom: 2px solid #e53935;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+
+    /* animación al aparecer */
+    animation: slideDown 0.4s ease-out;
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== TÍTULO dentro de la barra ===== */
+.subtema-nav .nav-titulo {
+    flex: 1;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 10px;
+}
+
+.subtema-nav .nav-titulo span {
+    color: #e53935;
+    margin-right: 6px;
+}
+
+/* ===== BOTONES ANTERIOR / SIGUIENTE ===== */
+.nav-btn {
+    background: #2a2a2a;
+    color: white;
+    border: 1px solid #444;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    white-space: nowrap;
+    transition: 0.25s;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-btn:hover {
+    background: #e53935;
+    border-color: #e53935;
+    transform: translateX(0) scale(1.03);
+}
+
+.nav-btn:disabled,
+.nav-btn.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* ===== MENÚ DESPLEGABLE ===== */
+.nav-menu-wrapper {
+    position: relative;
+}
+
+.nav-menu-btn {
+    background: #2a2a2a;
+    color: white;
+    border: 1px solid #444;
+    padding: 8px 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.25s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-menu-btn:hover {
+    background: #333;
+    border-color: #e53935;
+}
+
+/* dropdown */
+.nav-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    background: #1f1f1f;
+    border: 1px solid #444;
+    border-radius: 8px;
+    min-width: 280px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.5);
+    overflow: hidden;
+    z-index: 1000;
+
+    animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateX(-50%) translateY(-6px); }
+    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
+}
+
+.nav-menu-wrapper:hover .nav-dropdown,
+.nav-menu-wrapper.open .nav-dropdown {
+    display: block;
+}
+
+.nav-dropdown a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.2s;
+    border-left: 3px solid transparent;
+}
+
+.nav-dropdown a:hover {
+    background: #2a2a2a;
+    color: white;
+    border-left-color: #e53935;
+}
+
+.nav-dropdown a.activo {
+    background: #2a2a2a;
+    color: white;
+    border-left-color: #e53935;
+    font-weight: bold;
+}
+
+.nav-dropdown a .num {
+    color: #e53935;
+    font-weight: bold;
+    font-size: 12px;
+    min-width: 36px;
+}
+
+/* separador entre grupos de unidades */
+.nav-dropdown .grupo-label {
+    padding: 8px 18px 4px;
+    font-size: 11px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-top: 1px solid #333;
+}
+
+.nav-dropdown .grupo-label:first-child {
+    border-top: none;
+}
+
+/* ── breadcrumb ── */
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #aaa;
+    padding: 10px 0 0 2px;
+    flex-wrap: wrap;
+}
+.breadcrumb a {
+    color: #e53935;
+    text-decoration: none;
+    transition: 0.2s;
+}
+.breadcrumb a:hover { text-decoration: underline; }
+.bc-sep { color: #555; font-size: 15px; }
+
+/* ── collapsible grupo buttons ── */
+.grupo-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    background: #1a1a1a;
+    border: none;
+    border-left: 3px solid #e53935;
+    color: #e53935;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    padding: 8px 12px;
+    margin-top: 4px;
+    cursor: pointer;
+    text-align: left;
+    transition: background 0.2s, color 0.2s;
+}
+.grupo-toggle:hover {
+    background: #2a2a2a;
+    color: #ff6b6b;
+}
+.grupo-toggle.open {
+    background: #2a1a1a;
+}
+.grupo-arrow {
+    font-size: 12px;
+    transition: transform 0.25s ease;
+    flex-shrink: 0;
+}
+.grupo-toggle.open .grupo-arrow {
+    transform: rotate(180deg);
+}
+/* ===== NUEVO: CONTENEDOR PARA VIDEO E IMAGEN EN PARALELO ===== */
+.media-flex-container {
+    display: flex;
+    gap: 20px;          /* Espacio entre el video y la imagen */
+    margin-top: 30px;
+    align-items: flex-start; /* Alinea ambos elementos al techo */
+    flex-wrap: wrap;    /* Si la pantalla es chica, se ponen uno abajo del otro */
+}
+
+.media-flex-item {
+    flex: 1;            /* Hace que ambos ocupen el mismo ancho (50/50) */
+    min-width: 300px;   /* Evita que se compriman demasiado */
+}
+
+/* Estilo para el video local */
+.media-flex-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Reutilizamos el estilo de tus imágenes para que coincidan */
+.media-flex-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Ajuste para móviles */
+@media (max-width: 768px) {
+    .media-flex-container {
+        flex-direction: column;
+    }
+    .media-flex-item {
+        width: 100%;
+    }
+}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ciber-Media — 1.1.3 La Web en la multimedia</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/nav-subtemas.css">
+</head>
+<body>
+
+<input type="checkbox" id="menu-toggle">
+<input type="checkbox" id="unidad-toggle" class="submenu-toggle">
+
+<div class="header">
+    <div class="left-group">
+        <label for="menu-toggle" class="menu-btn">☰</label>
+        <img src="images/logonombresinfondoinverido.png" class="logo">
+    </div>
+    <img src="images/logoupiicsassinfondo.png" class="logo">
+</div>
+
+<div class="sidebar">
+    <a href="menu-principal.html">
+        <span class="icon"><img src="images/hogarinvertido.png" width="20"></span>
+        <span class="text">Inicio</span>
+    </a>
+    <label for="unidad-toggle" class="menu-item">
+        <span class="icon"><img src="images/librosinvertido.png" width="20"></span>
+        <span class="text">Unidades</span>
+    </label>
+    <div class="submenu">
+        <a href="Unidad_I.html" class="unidad">Unidad 1<span class="titulo-unidad">Contexto de la Multimedia</span></a>
+        <a href="Unidad_II.html" class="unidad">Unidad 2<span class="titulo-unidad">Tecnologías emergentes</span></a>
+        <a href="Unidad_III.html" class="unidad">Unidad 3<span class="titulo-unidad">Desarrollo e integración</span></a>
+    </div>
+    <a href="HERRAMIENTAS MULTIMEDIA.pdf" target="_blank">
+        <span class="icon"><img src="images/editarinvertido.png" width="20"></span>
+        <span class="text">Temario</span>
+    </a>
+    <a href="menu-principal-contactos.html">
+        <span class="icon"><img src="images/usuariosinvertido.png" width="20"></span>
+        <span class="text">Contacto</span>
+    </a>
+</div>
+
+<div class="main">
+
+    <nav class="subtema-nav">
+        <a href="Unidad_1_1_2.html" class="nav-btn" title="Anterior: Evolución de la computación gráfica">
+            ◀ Anterior
+        </a>
+
+        <div class="nav-menu-wrapper" id="navMenuWrapper">
+            <button class="nav-menu-btn" onclick="toggleMenu()">
+                <span>☰ Subtemas</span>
+                <span id="menuArrow">▾</span>
+            </button>
+            <div class="nav-dropdown" id="navDropdown">
+                <div class="grupo-label">Unidad 1 — Antecedentes y fundamentos</div>
+                <a href="Unidad_1_1_1.html"><span class="num">1.1.1</span>Elementos de la multimedia</a>
+                <a href="Unidad_1_1_2.html"><span class="num">1.1.2</span>Evolución de la computación gráfica</a>
+                <a href="Unidad_1_1_3.html" class="activo"><span class="num">1.1.3</span>La Web en la multimedia</a>
+                <a href="Unidad_1_1_4.html"><span class="num">1.1.4</span>Formatos de imagen, audio, video y texto</a>
+                <div class="grupo-label">Unidad 2</div>
+                <a href="Unidad_II.html"><span class="num">2</span>Tecnologías emergentes</a>
+                <div class="grupo-label">Unidad 3</div>
+                <a href="Unidad_III.html"><span class="num">3</span>Desarrollo e integración</a>
+            </div>
+        </div>
+
+        <div class="nav-titulo">
+            <span>1.1.3</span>La Web en la multimedia
+        </div>
+
+        <a href="Unidad_1_1_4.html" class="nav-btn" title="Siguiente: Formatos de imagen, audio, video y texto">
+            Siguiente ▶
+        </a>
+    </nav>
+
+    <div class="content-box">
+        <h1>1.1.3 La Web en la multimedia</h1>
+        <h2>El impacto que ha tenido el uso de la multimedia en internet, sus usos y ventajas.</h2>
+
+        <p>El concepto de multimedia hace referencia a múltiples medios, sean físicos y/o digitales, para comunicar o transmitir un contenido. También hace referencia a medios que permiten almacenar y difundir contenidos con dichas características.</p>
+        <p>Las páginas web también pueden mostrar un desarrollo de multimedia, como animaciones en HTML5, videos (como YouTube), música y material para leer. Esto se conoce como multimedia interactiva, porque dependerá del usuario cómo será la presentación.</p>
+
+        <h3>Incorporar multimedia en la página</h3>
+        <p>Los navegadores como HTML no son diseñados para mostrar algo más complicado que una foto. Entonces, para incorporar animaciones, videos o audio se requieren técnicas más complejas.</p>
+        <p>Una forma más sencilla de agregar animaciones es a través de GIFs animados, ya que este es incorporado como una imagen normal pero en vez de ser una imagen estática resulta en una animación. Los GIFs son animaciones sencillas; si se quiere implementar algo más elaborado se tienen que implementar complementos o "plugins".</p>
+    </div>
+
+</div>
+
+<footer class="footer">
+    <p>© 2026 Ciber Media. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    const menuToggle = document.getElementById("menu-toggle");
+    const unidadToggle = document.getElementById("unidad-toggle");
+    menuToggle.addEventListener("change", () => {
+        if (menuToggle.checked) unidadToggle.checked = false;
+    });
+    function toggleMenu() {
+        const wrapper = document.getElementById("navMenuWrapper");
+        const arrow = document.getElementById("menuArrow");
+        wrapper.classList.toggle("open");
+        arrow.textContent = wrapper.classList.contains("open") ? "▴" : "▾";
+    }
+    document.addEventListener("click", (e) => {
+        const wrapper = document.getElementById("navMenuWrapper");
+        if (!wrapper.contains(e.target)) {
+            wrapper.classList.remove("open");
+            document.getElementById("menuArrow").textContent = "▾";
+        }
+    });
+</script>
+</body>
+</html>

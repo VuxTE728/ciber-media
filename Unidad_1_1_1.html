@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ciber-Media — 1.1.1 Elementos de la multimedia</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/nav-subtemas.css">
+    <style>
+        /* ── breadcrumb ── */
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 13px;
+            color: #aaa;
+            padding: 10px 0 0 2px;
+            flex-wrap: wrap;
+        }
+        .breadcrumb a {
+            color: #e53935;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+        .breadcrumb a:hover { text-decoration: underline; }
+        .bc-sep { color: #555; font-size: 15px; }
+
+        /* ── collapsible grupo buttons ── */
+        .grupo-toggle {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            background: #1a1a1a;
+            border: none;
+            border-left: 3px solid #e53935;
+            color: #e53935;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.6px;
+            text-transform: uppercase;
+            padding: 8px 12px;
+            margin-top: 4px;
+            cursor: pointer;
+            text-align: left;
+            transition: background 0.2s, color 0.2s;
+        }
+        .grupo-toggle:hover {
+            background: #2a2a2a;
+            color: #ff6b6b;
+        }
+        .grupo-toggle.open {
+            background: #2a1a1a;
+        }
+        .grupo-arrow {
+            font-size: 12px;
+            transition: transform 0.25s ease;
+            flex-shrink: 0;
+        }
+        .grupo-toggle.open .grupo-arrow {
+            transform: rotate(180deg);
+        }
+        .grupo-items {
+            overflow: hidden;
+            max-height: 0;
+            transition: max-height 0.3s ease;
+        }
+        .grupo-items.open {
+            max-height: 500px;
+        }
+    </style>
+</head>
+<body>
+
+<input type="checkbox" id="menu-toggle">
+<input type="checkbox" id="unidad-toggle" class="submenu-toggle">
+
+<div class="header">
+    <div class="left-group">
+        <label for="menu-toggle" class="menu-btn">☰</label>
+        <img src="images/logonombresinfondoinverido.png" class="logo">
+    </div>
+    <img src="images/logoupiicsassinfondo.png" class="logo">
+</div>
+
+<div class="sidebar">
+    <a href="menu-principal.html">
+        <span class="icon"><img src="images/hogarinvertido.png" width="20"></span>
+        <span class="text">Inicio</span>
+    </a>
+    <label for="unidad-toggle" class="menu-item">
+        <span class="icon"><img src="images/librosinvertido.png" width="20"></span>
+        <span class="text">Unidades</span>
+    </label>
+    <div class="submenu">
+        <a href="Unidad_I.html" class="unidad">Unidad 1<span class="titulo-unidad">Contexto de la Multimedia</span></a>
+        <a href="Unidad_II.html" class="unidad">Unidad 2<span class="titulo-unidad">Tecnologías emergentes</span></a>
+        <a href="Unidad_III.html" class="unidad">Unidad 3<span class="titulo-unidad">Desarrollo e integración</span></a>
+    </div>
+    <a href="HERRAMIENTAS MULTIMEDIA.pdf" target="_blank">
+        <span class="icon"><img src="images/editarinvertido.png" width="20"></span>
+        <span class="text">Temario</span>
+    </a>
+    <a href="menu-principal-contactos.html">
+        <span class="icon"><img src="images/usuariosinvertido.png" width="20"></span>
+        <span class="text">Contacto</span>
+    </a>
+</div>
+
+<div class="main">
+
+    <nav class="subtema-nav">
+        <a href="Unidad_I.html" class="nav-btn disabled" title="Primera página">◀ Anterior</a>
+
+        <div class="nav-menu-wrapper" id="navMenuWrapper">
+            <button class="nav-menu-btn" onclick="toggleMenu()">
+                <span>☰ Subtemas</span>
+                <span id="menuArrow">▾</span>
+            </button>
+            <div class="nav-dropdown" id="navDropdown">
+
+                <button class="grupo-toggle open" onclick="toggleGrupo(this)">
+                    <span class="grupo-label-text">Unidad 1.1 — Antecedentes y fundamentos</span>
+                    <span class="grupo-arrow">▾</span>
+                </button>
+                <div class="grupo-items open">
+                    <a href="Unidad_1_1_1.html" class="activo"><span class="num">1.1.1</span>Elementos de la multimedia</a>
+                    <a href="Unidad_1_1_2.html"><span class="num">1.1.2</span>Evolución de la computación gráfica</a>
+                    <a href="Unidad_1_1_3.html"><span class="num">1.1.3</span>La Web en la multimedia</a>
+                    <a href="Unidad_1_1_4.html"><span class="num">1.1.4</span>Formatos de imagen, audio, video y texto</a>
+                </div>
+
+                <button class="grupo-toggle" onclick="toggleGrupo(this)">
+                    <span class="grupo-label-text">Unidad 1.2 — Herramientas</span>
+                    <span class="grupo-arrow">▾</span>
+                </button>
+                <div class="grupo-items">
+                    <a href="Unidad_1_2_1.html"><span class="num">1.2.1</span>Descripción de los elementos multimedia</a>
+                    <a href="Unidad_1_2_2.html"><span class="num">1.2.2</span>Manejo de cámara: Tomas, movimientos y planos</a>
+                    <a href="Unidad_1_2_3.html"><span class="num">1.2.3</span>Lenguaje visual y la semiótica</a>
+                    <a href="Unidad_1_2_4.html"><span class="num">1.2.4</span>Procesamiento digital de audio</a>
+                </div>
+
+                <button class="grupo-toggle" onclick="toggleGrupo(this)">
+                    <span class="grupo-label-text">Unidad 1.3 — Animación</span>
+                    <span class="grupo-arrow">▾</span>
+                </button>
+                <div class="grupo-items">
+                    <a href="Unidad_1_3_1.html"><span class="num">1.3.1</span>La animación y su conceptualización</a>
+                    <a href="Unidad_1_3_2.html"><span class="num">1.3.2</span>Tipos de animación y sus características</a>
+                    <a href="Unidad_1_3_3.html"><span class="num">1.3.3</span>El proceso en los diferentes tipos de animación</a>
+                </div>
+
+                <button class="grupo-toggle" onclick="toggleGrupo(this)">
+                    <span class="grupo-label-text">Unidad 1.4 — Aplicaciones</span>
+                    <span class="grupo-arrow">▾</span>
+                </button>
+                <div class="grupo-items">
+                    <a href="Unidad_1_4_1.html"><span class="num">1.4.1</span>Tecnologías abiertas y cerradas en la animación</a>
+                    <a href="Unidad_1_4_2.html"><span class="num">1.4.2</span>La animación: base de la realidad virtual</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="nav-titulo">
+            <span>1.1.1</span>Elementos de la multimedia
+        </div>
+
+        <a href="Unidad_1_1_2.html" class="nav-btn" title="Siguiente: Evolución de la computación gráfica">Siguiente ▶</a>
+    </nav>
+
+    <div class="content-box">
+        <nav class="breadcrumb"><a href="Unidad_I.html">Unidad 1</a><span class="bc-sep">›</span><span>Unidad 1.1</span><span class="bc-sep">›</span><span>Unidad 1.1.1</span></nav>
+        <h1>1.1.1 Elementos de la multimedia</h1>
+        <h2>Texto, imágenes, audio y video.</h2>
+        
+        <p>En la multimedia existen distintos elementos que nos ayudan a transmitir un mensaje de una manera más eficiente. Estos son:</p>
+        <p>Texto, audio, video, imágenes, gráficos o cuadros, y las animaciones.</p>
+        <p>Cada elemento tiene sus características específicas y se utiliza según el propósito de la comunicación multimedia.</p>
+        <table style="border:2px solid #ccc;width:100%;border-collapse:collapse;" cellpadding="10">
+            <tr style="background:#f0f0f0;"><th>Elemento</th><th>Descripción</th><th>Ejemplo</th></tr>
+            <tr><td>Texto</td><td>Se usa para expresar información específica, para reforzar la información de otros medios.</td><td>Encabezados, párrafos, títulos o lemas.</td></tr>
+            <tr style="background:#fafafa;"><td>Gráficos e imágenes</td><td>Sirven como orientaciones visuales. Se clasifican en: mapas de bits y gráficos vectoriales.</td><td>Fotografías, infografías, logotipos.</td></tr>
+            <tr><td>Animaciones</td><td>Secuencias de imágenes en movimiento, cada imagen es conocida como fotograma.</td><td>Animaciones web, GIFs animados.</td></tr>
+            <tr style="background:#fafafa;"><td>Sonido</td><td>Sonidos que se utilizan para complementar la información visual o textual.</td><td>Música de fondo, efectos de sonido, narración.</td></tr>
+            <tr><td>Video</td><td>Secuencias de imágenes en movimiento con sonido, para transmitir información de manera más dinámica.</td><td>Videos educativos, comerciales, tutoriales.</td></tr>
+        </table>
+
+    </div>
+
+</div>
+
+<footer class="footer">
+    <p>© 2026 Ciber Media. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+    const menuToggle   = document.getElementById("menu-toggle");
+    const unidadToggle = document.getElementById("unidad-toggle");
+    menuToggle.addEventListener("change", () => {
+        if (menuToggle.checked) unidadToggle.checked = false;
+    });
+    function toggleGrupo(btn) {
+        const items = btn.nextElementSibling;
+        const isOpen = btn.classList.contains("open");
+        btn.classList.toggle("open", !isOpen);
+        items.classList.toggle("open", !isOpen);
+    }
+
+    function toggleMenu() {
+        const wrapper = document.getElementById("navMenuWrapper");
+        const arrow   = document.getElementById("menuArrow");
+        wrapper.classList.toggle("open");
+        arrow.textContent = wrapper.classList.contains("open") ? "▴" : "▾";
+    }
+    document.addEventListener("click", (e) => {
+        const wrapper = document.getElementById("navMenuWrapper");
+        if (!wrapper.contains(e.target)) {
+            wrapper.classList.remove("open");
+            document.getElementById("menuArrow").textContent = "▾";
+        }
+    });
+</script>
+</body>
+</html>

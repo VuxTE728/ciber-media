@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Ciber-Media</title>
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<!-- CONTROLADORES -->
+<input type="checkbox" id="menu-toggle">
+<input type="checkbox" id="unidad-toggle" class="submenu-toggle">
+
+<!-- HEADER -->
+<div class="header">
+    <div class="left-group">
+        <label for="menu-toggle" class="menu-btn">☰</label>
+        <img src="images/logonombresinfondoinverido.png" class="logo">
+    </div>
+
+    <img src="images/logoupiicsassinfondo.png" class="logo">
+</div>
+
+<!-- MENÚ LATERAL -->
+<div class="sidebar">
+
+    <a href="menu-principal.html">
+        <span class="icon">
+            <img src="images/hogarinvertido.png" width="20">
+        </span>
+        <span class="text">Inicio</span>
+    </a>
+
+    <label for="unidad-toggle" class="menu-item">
+        <span class="icon">
+            <img src="images/librosinvertido.png" width="20">
+        </span>
+        <span class="text">Unidades</span>
+    </label>
+
+    <div class="submenu">
+        <a href="Unidad_I.html">Unidad 1</a>
+        <a href="Unidad_II.html">Unidad 2</a>
+        <a href="Unidad_III.html">Unidad 3</a>
+    </div>
+
+    <a href="HERRAMIENTAS MULTIMEDIA.pdf" target="_blank">
+        <span class="icon">
+            <img src="images/editarinvertido.png" width="20">
+        </span>
+        <span class="text">Temario</span>
+    </a>
+
+    <a href="menu-principal-contactos.html" >
+        <span class="icon">
+            <img src="images/usuariosinvertido.png" width="20">
+        </span>
+        <span class="text">Contacto</span>
+    </a>
+
+</div>
+
+<div class="main">
+    <div class="content-box">
+        <h2>Título del contenido</h2>
+        <p>
+            Aquí puedes colocar el texto que desees.
+            Esta área es completamente editable.
+        </p>
+    </div>
+</div>
+
+<!-- 🔥 SCRIPT QUE CIERRA UNIDADES CUANDO SE CIERRA EL MENÚ -->
+<script>
+const menuToggle = document.getElementById("menu-toggle");
+const unidadToggle = document.getElementById("unidad-toggle");
+
+menuToggle.addEventListener("change", function() {
+    if (menuToggle.checked) {
+        unidadToggle.checked = false;
+    }
+});
+</script>
+<footer class="footer">
+    <p>© 2026 Ciber Media. Todos los derechos reservados.</p>
+</footer>
+</body>
+</html>
