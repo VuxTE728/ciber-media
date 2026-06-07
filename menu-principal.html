@@ -2,125 +2,406 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Ciber-Media</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ciber-Media — Herramientas Multimedia</title>
 <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-<!-- CONTROLADORES -->
 <input type="checkbox" id="menu-toggle">
 <input type="checkbox" id="unidad-toggle" class="submenu-toggle">
 
 <!-- HEADER -->
 <div class="header">
-    <div class="left-group">
-        <label for="menu-toggle" class="menu-btn">☰</label>
-        <img src="images/logonombresinfondoinverido.png" class="logo">
-    </div>
-
-    <img src="images/logoupiicsassinfondo.png" class="logo">
+  <div class="left-group">
+    <label for="menu-toggle" class="menu-btn">☰</label>
+    <img src="images/logonombresinfondoinverido.png" class="logo" alt="Ciber-Media">
+  </div>
+  <img src="images/logoupiicsassinfondo.png" class="logo" alt="UPIICSA">
 </div>
 
-<!-- MENÚ LATERAL -->
+<!-- SIDEBAR -->
 <div class="sidebar">
-
-    <a href="menu-principal.html">
-        <span class="icon">
-            <img src="images/hogarinvertido.png" width="20">
-        </span>
-        <span class="text">Inicio</span>
+  <a href="menu-principal.html">
+    <span class="icon"><img src="images/hogarinvertido.png" width="20" alt=""></span>
+    <span class="text">Inicio</span>
+  </a>
+  <label for="unidad-toggle" class="menu-item">
+    <span class="icon"><img src="images/librosinvertido.png" width="20" alt=""></span>
+    <span class="text">Unidades</span>
+  </label>
+  <div class="submenu">
+    <a href="Unidad_I.html" class="unidad">
+      Unidad 1
+      <span class="titulo-unidad">Contexto de la Multimedia para aplicaciones informáticas</span>
     </a>
-
-    <label for="unidad-toggle" class="menu-item">
-        <span class="icon">
-            <img src="images/librosinvertido.png" width="20">
-        </span>
-        <span class="text">Unidades</span>
-    </label>
-
-    <div class="submenu">
-
-        <a href="Unidad_I.html" class="unidad">
-            Unidad 1
-            <span class="titulo-unidad">Contexto de la Multimedia para aplicaciones informáticas</span>
-        </a>
-
-        <a href="Unidad_II.html" class="unidad">
-            Unidad 2
-            <span class="titulo-unidad">Tecnologias emergentesen las herramientas multimedia</span>
-        </a>
-
-        <a href="Unidad_III.html" class="unidad">
-            Unidad 3
-            <span class="titulo-unidad">Desarrollo e integración de herramientas multimedia a sistemas informaticos</span>
-        </a>
-
-    </div>
-
-    <a href="HERRAMIENTAS MULTIMEDIA.pdf" target="_blank">
-        <span class="icon">
-            <img src="images/editarinvertido.png" width="20">
-        </span>
-        <span class="text">Temario</span>
+    <a href="Unidad_II.html" class="unidad">
+      Unidad 2
+      <span class="titulo-unidad">Tecnologías emergentes en herramientas multimedia</span>
     </a>
-
-    <a href="menu-principal-contactos.html">
-        <span class="icon">
-            <img src="images/usuariosinvertido.png" width="20">
-        </span>
-        <span class="text">Contacto</span>
+    <a href="Unidad_III.html" class="unidad">
+      Unidad 3
+      <span class="titulo-unidad">Desarrollo e integración de herramientas multimedia</span>
     </a>
-
+  </div>
+  <a href="HERRAMIENTAS MULTIMEDIA.pdf" target="_blank">
+    <span class="icon"><img src="images/editarinvertido.png" width="20" alt=""></span>
+    <span class="text">Temario</span>
+  </a>
+  <a href="menu-principal-contactos.html">
+    <span class="icon"><img src="images/usuariosinvertido.png" width="20" alt=""></span>
+    <span class="text">Contacto</span>
+  </a>
 </div>
 
+<!-- CONTENIDO -->
 <div class="main">
-    <div class="content-box">
 
-        <h1>Herramientas Multimedia</h1>
+  <!-- HERO -->
+  <section class="hero-section">
+    <p class="hero-eyebrow">UPIICSA · IPN · 2026</p>
+    <h1 class="hero-title">
+      Herramientas<br>
+      <span>Multimedia</span>
+    </h1>
+    <p class="hero-desc">
+      Explora los fundamentos de la multimedia, tecnologías emergentes y su integración en aplicaciones informáticas modernas.
+    </p>
+    <div class="hero-badges">
+      <span class="badge">3 Unidades</span>
+      <span class="badge">Animación & VR</span>
+      <span class="badge">Producción Digital</span>
+      <span class="badge">Diseño Multimedia</span>
+    </div>
+  </section>
 
-        <p>
-            En la era digital, las herramientas multimedia se han convertido en piezas clave para la comunicación, el aprendizaje y la creatividad. Desde la edición de imágenes y video hasta la producción de audio y diseño interactivo, estas tecnologías permiten transformar ideas en contenidos dinámicos, atractivos y accesibles para todo tipo de público.
-        </p>
-
-
-
-        <p>
-            En el ámbito educativo, las herramientas multimedia han revolucionado la forma en que se imparte el conocimiento, permitiendo la creación de materiales interactivos, presentaciones dinámicas y recursos audiovisuales que enriquecen la experiencia de aprendizaje. En el mundo empresarial, estas herramientas son esenciales para la creación de contenido de marketing, presentaciones corporativas y comunicación interna.
-        </p>
-        <a href="https://www.youtube.com/embed/e-lQYKYbOtI" target="_blank">
-    <h2>Elementos de la multimedia</h2>
-</a>
-<div class="media-flex-container">
-    
-    <div class="media-flex-item">
+  <!-- VIDEO + IMAGEN -->
+  <section class="media-section">
+    <h2>Elementos de la Multimedia</h2>
+    <div class="media-flex-container">
+      <div class="media-flex-item">
         <video controls>
-            <source src="images/¿Qué es la multimedia_.mp4" type="video/mp4">
-            Tu navegador no soporta video embebido.
+          <source src="images/¿Qué es la multimedia_.mp4" type="video/mp4">
+          Tu navegador no soporta video embebido.
         </video>
+      </div>
+      <div class="media-flex-item">
+        <img src="images/elementos multimedia menu.png" alt="Elementos de la multimedia">
+      </div>
     </div>
+  </section>
 
-    <div class="media-flex-item">
-        <img src="images/elementos multimedia menu.png" alt="Descripción de la imagen">
+  <!-- UNIDADES -->
+  <section class="unidad-container">
+    <div class="unidades-grid">
+
+      <!-- UNIDAD 1 -->
+      <details class="btn-unidad grande">
+        <summary>
+          <div class="numero-unidad">1</div>
+          <div class="summary-texto">
+            <h3>Contexto de la Multimedia</h3>
+            <p>Antecedentes, herramientas, animación y aplicaciones</p>
+          </div>
+          <span class="summary-chevron">▾</span>
+        </summary>
+        <div class="subtemas">
+          <div class="subtemas-grid">
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_1_1_1.html'">
+              <img src="images/multimedia_8064486.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">1.1.1</span>
+                <h4>Elementos de la multimedia</h4>
+                <p>Texto, imágenes, audio y video.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_1_1_2.html'">
+              <img src="images/digital-marketing_4025152.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">1.1.2</span>
+                <h4>Evolución de la computación gráfica</h4>
+                <p>Historia e impacto en la multimedia.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_1_1_3.html'">
+              <img src="images/application_4857935.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">1.1.3</span>
+                <h4>La Web en la multimedia</h4>
+                <p>Internet como plataforma multimedia.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_1_1_4.html'">
+              <img src="images/video-marketing_1644015.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">1.1.4</span>
+                <h4>Formatos de imagen, audio, video y texto</h4>
+                <p>Características de cada formato.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_1_2_1.html'">
+              <img src="images/multimedia_8064486.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">1.2.1</span>
+                <h4>Descripción de los elementos multimedia</h4>
+                <p>Preproducción, producción y postproducción.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_1_2_2.html'">
+              <img src="images/digital-marketing_4025152.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">1.2.2</span>
+                <h4>Manejo de cámara</h4>
+                <p>Tomas, movimientos y planos.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_1_2_3.html'">
+              <img src="images/application_4857935.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">1.2.3</span>
+                <h4>Lenguaje visual y la semiótica</h4>
+                <p>Procesamiento digital de la imagen.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_1_2_4.html'">
+              <img src="images/video-marketing_1644015.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">1.2.4</span>
+                <h4>Procesamiento digital de audio</h4>
+                <p>Digitalización y edición de audio.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_1_3_1.html'">
+              <img src="images/multimedia_8064486.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">1.3.1</span>
+                <h4>La animación y su conceptualización</h4>
+                <p>FPS, interpolación, rigging y keyframe.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_1_3_2.html'">
+              <img src="images/digital-marketing_4025152.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">1.3.2</span>
+                <h4>Tipos de animación</h4>
+                <p>2D, 3D, stop motion y por computadora.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_1_3_3.html'">
+              <img src="images/application_4857935.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">1.3.3</span>
+                <h4>El proceso de animación</h4>
+                <p>Proceso según el tipo de animación.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_1_4_1.html'">
+              <img src="images/multimedia_8064486.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">1.4.1</span>
+                <h4>Tecnologías abiertas y cerradas</h4>
+                <p>Diferencias y uso en la animación.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_1_4_2.html'">
+              <img src="images/video-marketing_1644015.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">1.4.2</span>
+                <h4>La animación: base de la realidad virtual</h4>
+                <p>Animación integrada en entornos VR.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </details>
+
+      <!-- UNIDAD 2 -->
+      <details class="btn-unidad grande">
+        <summary>
+          <div class="numero-unidad">2</div>
+          <div class="summary-texto">
+            <h3>Tecnologías Emergentes</h3>
+            <p>Realidad virtual, entornos y lenguajes de desarrollo</p>
+          </div>
+          <span class="summary-chevron">▾</span>
+        </summary>
+        <div class="subtemas">
+          <div class="subtemas-grid">
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_2_1_1.html'">
+              <img src="images/multimedia_8064486.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">2.1.1</span>
+                <h4>Características de la Realidad Virtual</h4>
+                <p>Inmersión sensorial e interactividad.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_2_1_2.html'">
+              <img src="images/digital-marketing_4025152.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">2.1.2</span>
+                <h4>Evolución de la Realidad Virtual</h4>
+                <p>Desde el siglo XIX hasta hoy.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_2_1_3.html'">
+              <img src="images/application_4857935.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">2.1.3</span>
+                <h4>Hibridación tecnológica</h4>
+                <p>IA, nube, RA, IoT y 5G con VR.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_2_2_1.html'">
+              <img src="images/multimedia_8064486.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">2.2.1</span>
+                <h4>Tecnologías de recorridos virtuales</h4>
+                <p>Fotografía panorámica y video 360°.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_2_2_2.html'">
+              <img src="images/digital-marketing_4025152.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">2.2.2</span>
+                <h4>Software de entornos virtuales</h4>
+                <p>Unity, Unreal Engine, Blender.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_2_2_3.html'">
+              <img src="images/application_4857935.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">2.2.3</span>
+                <h4>Herramientas de VR y RA</h4>
+                <p>Meta Quest, ARKit, ARCore.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_2_2_4.html'">
+              <img src="images/video-marketing_1644015.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">2.2.4</span>
+                <h4>Aplicaciones de entornos virtuales</h4>
+                <p>Educación, medicina y entretenimiento.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_2_2_5.html'">
+              <img src="images/multimedia_8064486.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">2.2.5</span>
+                <h4>Motores de videojuegos</h4>
+                <p>Unity, Unreal, Godot y CryEngine.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_2_3_1.html'">
+              <img src="images/digital-marketing_4025152.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">2.3.1</span>
+                <h4>Lenguajes de desarrollo web</h4>
+                <p>HTML5, CSS, JavaScript, PHP.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_2_3_2.html'">
+              <img src="images/application_4857935.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">2.3.2</span>
+                <h4>Lenguajes de computación gráfica</h4>
+                <p>C++, C#, Python, WebGL.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_2_4_1.html'">
+              <img src="images/video-marketing_1644015.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">2.4.1</span>
+                <h4>Ambientes de desarrollo</h4>
+                <p>Adobe CC, Unity, Blender, Avid.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_2_4_2.html'">
+              <img src="images/multimedia_8064486.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">2.4.2</span>
+                <h4>Integración de tecnologías emergentes</h4>
+                <p>IA, RA, Blockchain y 5G.</p>
+              </div>
+            </div>
+
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_2_4_3.html'">
+              <img src="images/digital-marketing_4025152.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">2.4.3</span>
+                <h4>Aplicaciones usuario final vs desarrollador</h4>
+                <p>Perspectivas de uso multimedia.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </details>
+
+      <!-- UNIDAD 3 -->
+      <details class="btn-unidad grande">
+        <summary>
+          <div class="numero-unidad">3</div>
+          <div class="summary-texto">
+            <h3>Desarrollo e Integración</h3>
+            <p>Herramientas multimedia en sistemas informáticos</p>
+          </div>
+          <span class="summary-chevron">▾</span>
+        </summary>
+        <div class="subtemas">
+          <div class="subtemas-grid">
+            <div class="btn-unidad interna" onclick="window.location.href='Unidad_III.html'">
+              <img src="images/application_4857935.png" class="icono-btn" alt="">
+              <div class="texto">
+                <span class="num-interna">3.0</span>
+                <h4>Contenido en desarrollo</h4>
+                <p>Próximamente disponible.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </details>
+
     </div>
+  </section>
 
 </div>
-    </div>
-</div>
 
-
-<!-- 🔥 SCRIPT QUE CIERRA UNIDADES CUANDO SE CIERRA EL MENÚ -->
-<script>
-const menuToggle = document.getElementById("menu-toggle");
-const unidadToggle = document.getElementById("unidad-toggle");
-
-menuToggle.addEventListener("change", function() {
-    if (menuToggle.checked) {
-        unidadToggle.checked = false;
-    }
-});
-</script>
 <footer class="footer">
-    <p>© 2026 Ciber Media. Todos los derechos reservados.</p>
+  <p>© 2026 Ciber-Media — UPIICSA · IPN. Todos los derechos reservados.</p>
 </footer>
+
+<script>
+  const menuToggle   = document.getElementById("menu-toggle");
+  const unidadToggle = document.getElementById("unidad-toggle");
+  menuToggle.addEventListener("change", () => {
+    if (menuToggle.checked) unidadToggle.checked = false;
+  });
+</script>
 </body>
 </html>
